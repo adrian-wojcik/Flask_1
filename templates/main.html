@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %} Główna {% endblock %}
+
+{% block main_title %} Strona główna {% endblock %}
+
+{% block main_content %}
+To jest jakas treść, a poniżej dwa linki: <br>
+<a href="{{ url_for('check_str_value', value='to jest test') }}"> Link 1 - str </a> <br>
+<a href="{{ url_for('check_int_value', value=123) }}"> Link 2 - int </a> <br>
+{% endblock %}

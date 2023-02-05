@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %} Formularz kontaktowy {% endblock %}
+
+{% block main_title %} Formularz kontaktowy {% endblock %}
+
+{% block main_content %}
+{% for category, msg in get_flashed_messages(with_categories=true) %}
+{{ msg }} ({{ category }})<br>
+{% endfor %}
+<form action="" method="POST">
+    <label for="id_name">Imię</label><input id="id_name" type="text" name="name"><br>
+    <label for="id_email">Email</label><input id="id_email" type="email" name="email"><br>
+    <label for="id_body">Treść</label><textarea id="id_body" name="body"></textarea><br>
+    <input type="submit" value="Wyślij">
+</form>
+
+{% endblock %}
